@@ -13,6 +13,7 @@ header {
     width: 100%;
     align-items: center;
     padding-left: 15px;
+    z-index: 1;
 }
 
 #conteneurHeader {
@@ -69,18 +70,21 @@ nav {
     right: -40px;
 }
 
-li {
-    list-style: none;
+.centre{
+    display: flex;
+    flex-direction: row;
+
 }
 
 section {
     padding-top: 75px;
     padding-left: 93px;
-    padding-right: 470px;
+    padding-right: 5px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 5px;
-
+    float: left;
+    width: 70%;
 }
 
 .one {
@@ -158,25 +162,91 @@ img {
     max-height: 100%;
     display: block;
     border-radius: 5px;
+    transition: .1s;
+}
+img:hover{
+    transform: translateY(-10px);
 }
 
-
-#conteneurAside {
+aside {
+    padding-top: 75px;
     background-color: #E60012;
-    position: fixed;
-    top: 75px;
-    right: 0;
-    width: 465px;
-    height: 100%;
+    float: left;
+    width: 30%;
 }
 
-footer {
-    background-color: #bf0010;
-    padding-left: 88px;
-    font-size: 12px;
-    height: 130px;
-    padding-top: 20px;
+.footerNoir {
+    grid-column: 1/4;
+    grid-row: 7;
+    display: flex;
+    color: white;
+    font-size: 34px;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    height: 57px;
 }
-p{
-    padding-bottom: 20px;
+.facebook {
+    display: flex;
+    color: white;
+    background-color: #385998;
+    width: 188px;
+    height: 36px;
+    margin-left: 30px;
+    font-size: 14px;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.twitter {
+    display: flex;
+    color: white;
+    background-color: #55ACEE;
+    width: 188px;
+    height: 36px;
+    margin-left: 30px;
+    font-size: 14px;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.footerNintendo {
+    grid-column: 1/4;
+    grid-row: 8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #e60012;
+    height: 48px;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.footerRouge {
+    grid-column: 1/4;
+    grid-row: 9;
+    background-color: #bf0010;
+    height: 129px;
+    padding-left: 30px;
+    font-size: 12px;
+    color: white;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+button {
+    display: flex;
+    color: white;
+    background-color: #bf0010;
+    height: 32px;
+    width: 113px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+    .section, .aside {
+      width: 100%;
+    }
 }
