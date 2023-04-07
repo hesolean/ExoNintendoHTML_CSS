@@ -73,7 +73,6 @@ nav {
 .centre{
     display: flex;
     flex-direction: row;
-
 }
 
 section {
@@ -179,15 +178,18 @@ aside {
     grid-column: 1/4;
     grid-row: 7;
     display: flex;
+    flex-direction: row;
     color: white;
     font-size: 34px;
     align-items: center;
     justify-content: center;
     background-color: black;
     height: 57px;
+    float: left;
 }
 .facebook {
     display: flex;
+    flex-wrap: wrap;
     color: white;
     background-color: #385998;
     width: 188px;
@@ -196,10 +198,15 @@ aside {
     font-size: 14px;
     align-items: center;
     border-radius: 5px;
+    float: left;
+}
+.imgFB{
+    height: auto;
 }
 
 .twitter {
     display: flex;
+    flex-wrap: wrap;
     color: white;
     background-color: #55ACEE;
     width: 188px;
@@ -208,6 +215,7 @@ aside {
     font-size: 14px;
     align-items: center;
     border-radius: 5px;
+    float: left;
 }
 
 .footerNintendo {
@@ -220,6 +228,7 @@ aside {
     height: 48px;
     padding-right: 30px;
     padding-left: 30px;
+    float: left;
 }
 
 .footerRouge {
@@ -233,20 +242,38 @@ aside {
     display: inline-flex;
     flex-direction: column;
     justify-content: space-around;
+    float: left;
 }
 
 button {
     display: flex;
+    flex-wrap: wrap;
     color: white;
     background-color: #bf0010;
     height: 32px;
     width: 113px;
     justify-content: space-around;
     align-items: center;
+    float: left;
 }
 
-@media screen and (max-width: 600px) {
-    .section, .aside {
+@media screen and (max-width: 1000px) {
+    .section, .aside, .centre, .footerNintendo, .footerNoir, .footerRouge, .facebook, .twitter {
       width: 100%;
+      font-size: small;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .section, .aside, .centre, .footerNintendo, .footerNoir, .footerRouge, .facebook, .twitter {
+      width: 100%;
+      font-size: x-small;
+    }
+}
+
+@media screen and (max-width: 200px) {
+    .section, .aside, .centre, .footerNintendo, .footerNoir, .footerRouge, .facebook, .twitter {
+      width: 100%;
+      font-size: xx-small;
     }
 }
